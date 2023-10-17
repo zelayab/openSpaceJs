@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Open Space</title>
+    <link rel="stylesheet" href="style.css">
+    <script async src="script.js"></script>
+</head>
+<body>
+<div class="space">
+    <div class="planet-area">
+        <img class="planet" src="assets/mars.png"/>
+        <img class="rocket" src="assets/rocket.png"/>
+    </div>
+    <div class="control-panel">
+        <div class="control-panel__inner">
+            <input type="password" id="password" placeholder="Enter password to unlock" />
+            <input type="button" value="OK" id="ok_button" onclick="checkPassword();"/>
+            <hr class="text">
+            <p class="text">All the checkboxes must be ready to launch the rocket</p>
+            <div class="check-buttons">
+                <input type="checkbox" onchange="checkLaunch();" disabled/>
+                <input type="checkbox" onchange="checkLaunch();" disabled/>
+                <input type="checkbox" onchange="checkLaunch();" disabled/>
+                <input type="checkbox" onchange="checkLaunch();" disabled/>
+                <input type="checkbox" onchange="checkLaunch();" disabled/>
+                <input type="checkbox" onchange="checkLaunch();" disabled/>
+            </div>
+            <hr class="text">
+            <p class="text">All the ranges must be 100% to launch the rocket</p>
+
+            <div class="levers">
+                <input type="range" onchange="checkLaunch();" disabled/>
+                <input type="range" onchange="checkLaunch();" disabled/>
+                <input type="range" onchange="checkLaunch();" disabled/>
+                <input type="range" onchange="checkLaunch();" disabled/>
+                <input type="range" onchange="checkLaunch();" disabled/>
+            </div>
+            <input type="button" value="Launch" id="launch_button" onclick="launchRocket();" disabled/>
+        </div>
+    </div>
+</div>
+</body>
+</html>
